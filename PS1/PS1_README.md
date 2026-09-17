@@ -129,14 +129,14 @@ Scenario A scores on priority-weighted overrun only (dates are the flexible side
 
 **Worked example — 1-calendar-week overrun, priced differently depending on where it sits** (the overrun-day rows apply to A/C; the excess-access-night and ECLO rows apply to **B/C only** — Scenario A forbids both, so it has no lever besides accepting the overrun itself; cost = tier-weight × (1 + activity_priority nudge) × days, or the flat ECLO/excess-night rate):
 
-| Penalty source                                                                         | Calculation                     | Cost | Relative to a P3 overrun-day |
-| -------------------------------------------------------------------------------------- | ------------------------------- | ---- | ---------------------------- |
-| P3 contract,`activity_priority = 3` Activity 3, 10 days, change to activity priority | $1 \times (1+0.0) \times 7$   | 7    | 1×                          |
-| P3 contract,`activity_priority` 1 activity, 10 days                                  | $1 \times (1+0.3) \times 7$   | 9.1  | 1.3×                        |
-| P2 contract,`activity_priority` 3 activity, 10 days                                  | $10 \times (1+0.0) \times 7$  | 70   | 10×                         |
-| P1 contract,`activity_priority` 3 activity, 10 days                                  | $100 \times (1+0.0) \times 7$ | 700  | 100×                        |
-| Excess access-nights (Scenario B/C), 3 nights                                          | $7 \times 3$                  | 21   | 3×                          |
-| 6 ECLO nights used instead of overrunning                                              | $5 \times 6$                  | 30   | 4.3×                        |
+| Penalty source                                                                        | Calculation                           | Cost | Relative to a P3 overrun-day |
+| ------------------------------------------------------------------------------------- | ------------------------------------- | ---- | ---------------------------- |
+| P3 contract,`activity_priority = 3` Activity 3, 7 days, change to activity priority | $1 \times (1+0.0) \times 7(days)$   | 7    | 1×                          |
+| P3 contract,`activity_priority = 1`  activity, 7 days                              | $1 \times (1+0.3) \times 7(days)$   | 9.1  | 1.3×                        |
+| P2 contract,`activity_priority = 3`  activity, 7 days                              | $10 \times (1+0.0) \times 7(days)$  | 70   | 10×                         |
+| P1 contract,`activity_priority = 3`  activity, 7 days                              | $100 \times (1+0.0) \times 7(days)$ | 700  | 100×                        |
+| Excess access-nights (Scenario B/C), 3 nights                                         | $7 \times 3(nights)$                | 21   | 3×                          |
+| 6 ECLO nights used instead of overrunning                                             | $5 \times 6 (nights)$               | 30   | 4.3×                        |
 
 Reading it as an ordering, cheapest to costliest per unit: **P3 overrun-day (1×~1.3x)  < excess access-night (3x) < ECLO night (4.3x)< P2 overrun-day (10×) < P1 overrun-day (100×)**. Practically, **in Scenarios B/C**: a solver should absorb schedule pressure with Priority-3 slip first, reach for ECLO next, and only spend extra access-nights when ECLO headroom is exhausted — extra nights are operationally scarce to secure and now cost more per unit than an ECLO-night — before ever delaying Priority-2/Priority-1 contracts as a last resort. The `activity_priority` nudge is a tie-breaker *within* a contract, never a reason to prefer delaying a higher-tier contract over a lower-tier one.
 
@@ -215,7 +215,7 @@ You receive **instance files** (the demand book for a planning horizon) and retu
 | Dimension                        | What Judges Look For                                                                                                                                                                                                                             |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **1. Problem Fit**         | Handles Scenarios A, B & C sensibly; output is feasible and well-formed; trade-offs and displaced work are explained, not just produced. How you get there is open — any reasonable approach that addresses the real scheduling problem counts. |
-| **2. Technical Execution** | Scored directly from the reference **validator's** output run against hidden instances — feasibility, violation count, and score relative to the reference solver's benchmark.                                                             |
+| **2. Technical Execution** | Scored directly from the reference**validator's** output run against hidden instances — feasibility, violation count, and score relative to the reference solver's benchmark.                                                             |
 | **3. Ease of Use**         | A works controller could actually pick it up and use it. Interface form is your choice — judges are looking for genuine usability, not a specific set of features.                                                                              |
 
 ### 3.3 Bonus Scope & Beyond-the-Schedule Innovation
