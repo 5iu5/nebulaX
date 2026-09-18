@@ -28,6 +28,10 @@ htmlcov/
 # Local Streamlit secrets
 .streamlit/secrets.toml
 
+# Raw competition data and example submissions must not be committed/deployed
+PS3/02_Datasets/
+PS3/04_Example_Submission/
+
 # Logs and temporary files
 *.log
 *.tmp

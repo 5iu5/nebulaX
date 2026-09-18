@@ -1,4 +1,0 @@
-- For PS3 Subtask 1 (Door), work in `door/`.
-- For PS3 Subtask 2 (ACV), work in `acv/`.
-- For PS3 Subtask 4 (SHM), work in `shm/`.
-- For the shared Streamlit application and subsystem routing, work in `app/`; its entry point is `app/main.py`.
