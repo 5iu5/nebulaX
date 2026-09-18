@@ -10,7 +10,8 @@ import streamlit as st
 
 from acv.app.page import render as render_acv
 from door.app import render as render_door
-from shm.app import render as render_shm
+from rail.app import render as render_rail
+from shm_v2.app import render as render_shm
 
 st.set_page_config(page_title="NebulaX | Train condition monitoring", page_icon="🚆", layout="wide")
 st.markdown(
@@ -25,6 +26,7 @@ st.markdown(
 PAGES = {
     "ACV · Air conditioning": render_acv,
     "Door · Abnormal resistance": render_door,
+    "Rail · Corrugation": render_rail,
     "SHM · Fatigue damage": render_shm,
 }
 

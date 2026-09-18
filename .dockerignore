@@ -1,0 +1,48 @@
+# Version control / local agent files
+.git/
+.gitignore
+.pi/
+.agents/
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+**/.DS_Store
+**/__pycache__/
+*.py[cod]
+
+# Local Python environments
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+
+# Competition/raw datasets and example submissions - do not ship raw data
+PS3/02_Datasets/
+PS3/04_Example_Submission/
+
+# Runtime/build outputs
+cache/
+outputs/
+delivery/
+artifacts/**/*.tmp
+*.tmp
+
+# Development notebooks and exploratory artefacts
+*.ipynb
+.ipynb_checkpoints/
+
+# Test/development-only files
+tests/
+.coverage
+htmlcov/
+
+# Large docs/media not needed by the web app
+*.pdf
+*.mp4
+*.mov
+*.avi
+
+# Docker files are copied only when building, not needed inside image
+Dockerfile
+.dockerignore

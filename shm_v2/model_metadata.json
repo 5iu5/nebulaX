@@ -1,0 +1,12 @@
+{
+  "model": "rainflow_miner_power_law",
+  "m": 5.0,
+  "C": 728780380.7316327,
+  "fitted_on": "64 training files only",
+  "c_estimator": "mean(log(S)-log(D))",
+  "validation": {
+    "method": "leave-one-out",
+    "mape": 0.027140387544723178,
+    "score": 0.9728596124552769
+  }
+}

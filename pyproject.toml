@@ -15,11 +15,13 @@ neural = ["torch"]
 boosting = ["catboost>=1.2.8,<2"]
 
 [tool.setuptools.packages.find]
-include = ["acv*", "door*", "shm*"]
+include = ["acv*", "door*", "rail*", "shm*"]
 
 [tool.setuptools.package-data]
 door = ["*.csv", "*.joblib"]
 shm = ["*.csv", "*.json", "*.joblib"]
+shm_v2 = ["model_metadata.json"]
+rail = ["*.pkl"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
