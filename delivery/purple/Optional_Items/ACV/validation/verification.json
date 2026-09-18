@@ -1,0 +1,18 @@
+{
+  "method": "Live browser via Computer Use, plus Streamlit AppTest",
+  "upload_widget": "actual workbook selected through live file chooser",
+  "analysis_button": "clicked with final artifact",
+  "live_browser_verified": true,
+  "tabs_verified": [
+    "Car ranking",
+    "Cooling evidence",
+    "Data quality"
+  ],
+  "download_buttons_activated": [
+    "CSV",
+    "ZIP"
+  ],
+  "export_cli_byte_parity": true,
+  "model_sha256": "40311e9b3b6d046ccfe80e077da3ce2cf0477fca20d976b727981fd8bef87f96",
+  "video": "User is recording manually"
+}

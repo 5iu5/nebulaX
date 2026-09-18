@@ -1,0 +1,2 @@
+# Install on a network-connected machine; this dependency was unavailable in the local wheel cache.
+catboost>=1.2.8,<2

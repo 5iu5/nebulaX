@@ -1,0 +1,2 @@
+model,feature_set,feature_count,training_samples,normal_samples,abnormal_samples
+Logistic Regression,Whole-cycle,19,110,80,30

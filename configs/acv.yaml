@@ -1,0 +1,13 @@
+data_root: PS3/02_Datasets/ACV
+output_root: outputs/acv
+artifact_root: artifacts/acv
+seed: 42
+analysis_seconds: 30
+interpolation_seconds: 60
+steady_seconds: 300
+window_minutes: [15, 60, 180]
+minimum_coverage: 0.70
+bootstrap_samples: 200
+neural_max_seconds: 14400
+neural_max_epochs: 100
+seeds: [17, 42, 2026]

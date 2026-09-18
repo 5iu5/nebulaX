@@ -1,0 +1,3 @@
+ACV submission for purple.
+Open app/README_ACV.md for setup and run instructions.
+The prediction archive was generated through the included app.

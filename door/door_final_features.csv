@@ -1,0 +1,20 @@
+feature
+Motor current(mA)_mean
+Motor current(mA)_std
+Motor current(mA)_min
+Motor current(mA)_max
+Motor current(mA)_range
+Motor Voltage(10mV)_mean
+Motor Voltage(10mV)_std
+Motor Voltage(10mV)_min
+Motor Voltage(10mV)_max
+Motor Voltage(10mV)_range
+Motor electrodynamic force_mean
+Motor electrodynamic force_std
+Motor electrodynamic force_max
+Motor electrodynamic force_range
+Door leaf position_mean
+Door leaf position_std
+Door leaf position_min
+Door leaf position_max
+Door leaf position_range

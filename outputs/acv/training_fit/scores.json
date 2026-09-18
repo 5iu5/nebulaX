@@ -1,0 +1,121 @@
+{
+  "cases": [
+    {
+      "faulty_car": "01",
+      "file_id": "acv_case_01.xlsx",
+      "rank": 1,
+      "ranking": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "08",
+        "07",
+        "05",
+        "06"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    },
+    {
+      "faulty_car": "02",
+      "file_id": "acv_case_02.xlsx",
+      "rank": 1,
+      "ranking": [
+        "02",
+        "03",
+        "08",
+        "01",
+        "07",
+        "04",
+        "06",
+        "05"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    },
+    {
+      "faulty_car": "03",
+      "file_id": "acv_case_03.xlsx",
+      "rank": 1,
+      "ranking": [
+        "03",
+        "02",
+        "01",
+        "08",
+        "04",
+        "07",
+        "05",
+        "06"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    },
+    {
+      "faulty_car": "01",
+      "file_id": "acv_case_04.xlsx",
+      "rank": 1,
+      "ranking": [
+        "01",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "03",
+        "02"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    },
+    {
+      "faulty_car": "04",
+      "file_id": "acv_case_05.xlsx",
+      "rank": 1,
+      "ranking": [
+        "04",
+        "02",
+        "01",
+        "07",
+        "06",
+        "03",
+        "08",
+        "05"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    },
+    {
+      "faulty_car": "06",
+      "file_id": "acv_case_06.xlsx",
+      "rank": 1,
+      "ranking": [
+        "06",
+        "08",
+        "02",
+        "04",
+        "03",
+        "05",
+        "01",
+        "07"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    }
+  ],
+  "evaluation": "Training-fit evaluation of the final saved model on its six training cases; not held-out accuracy.",
+  "model_sha256": "40311e9b3b6d046ccfe80e077da3ce2cf0477fca20d976b727981fd8bef87f96",
+  "summary": {
+    "cases": 6,
+    "primary_metric": 1.0,
+    "top1_accuracy": 1.0,
+    "top2_accuracy": 1.0,
+    "worst_rank": 1
+  }
+}

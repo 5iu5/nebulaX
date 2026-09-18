@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nebulax-acv"
+version = "0.1.0"
+description = "Case-grouped ACV refrigerant fault ranking"
+requires-python = ">=3.11"
+dependencies = ["numpy", "pandas", "scipy", "scikit-learn", "pyarrow", "openpyxl", "streamlit", "plotly", "PyYAML", "joblib"]
+
+[project.optional-dependencies]
+dev = ["pytest", "playwright", "imageio-ffmpeg"]
+neural = ["torch"]
+boosting = ["catboost>=1.2.8,<2"]
+
+[tool.setuptools.packages.find]
+include = ["acv*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests/acv"]
+markers = ["integration: supplied workbook and end-to-end tests"]

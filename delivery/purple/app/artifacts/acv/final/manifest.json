@@ -1,0 +1,434 @@
+{
+  "code_hash": "8e3b2ffea23e24d6ee1b90b616ba9c723e1eeadeff06158790d747f889beeb04",
+  "feature_catalogue": {
+    "linear": [
+      "peer_mean",
+      "peer_p90",
+      "peer_p95",
+      "err_mean",
+      "err_p90",
+      "positive_error",
+      "peer_gt_05",
+      "peer_gt_1",
+      "peer_long_1",
+      "slope_5",
+      "manual_fraction",
+      "mode_disagreement"
+    ],
+    "tree": [
+      "peer_mean",
+      "peer_p90",
+      "peer_p95",
+      "err_mean",
+      "err_p90",
+      "positive_error",
+      "peer_gt_05",
+      "peer_gt_1",
+      "peer_long_1",
+      "slope_5",
+      "manual_fraction",
+      "mode_disagreement",
+      "err_median",
+      "err_p95",
+      "peer_gt_2",
+      "peer_long_05",
+      "peer_long_2",
+      "slope_15",
+      "startup_error",
+      "steady_error",
+      "cooling_fraction",
+      "full_fraction",
+      "half_fraction",
+      "late_change",
+      "daily_max",
+      "block15_p90",
+      "block60_p90",
+      "block180_p90",
+      "ambient_error",
+      "block60_mean",
+      "recovery_15",
+      "positive_peer"
+    ]
+  },
+  "format_version": 1,
+  "model_sha256": "40311e9b3b6d046ccfe80e077da3ce2cf0477fca20d976b727981fd8bef87f96",
+  "pressure_policy": "Diagnostic only; no independently validated rich-schema cohort.",
+  "quality_policy": "Unavailable cars retain neutral percentile 0.5; scores are not probabilities.",
+  "selection": {
+    "available_models": [
+      "healthy_residual",
+      "linear_ranker",
+      "tcn_mil",
+      "thermal"
+    ],
+    "baseline_params": {
+      "aggregation": "mean"
+    },
+    "baseline_summary": {
+      "cases": 6,
+      "primary_metric": 0.9791666666666666,
+      "top1_accuracy": 0.8333333333333334,
+      "top2_accuracy": 1.0,
+      "worst_rank": 2
+    },
+    "case_hashes": {
+      "acv_case_01.xlsx": "d0657d45b52d12db8fbde52242f44f6efd0e3050d04822920aa3ca3b984af233",
+      "acv_case_02.xlsx": "869107ed17735efb55f6d33de2d0456a0b1e76aadbb280a9eef830f6778194c8",
+      "acv_case_03.xlsx": "07801fb08e6fc3654a23cd3d245fd89b327c5e9dd70880b2d80eb600b8d746c6",
+      "acv_case_04.xlsx": "650676c44e8f5979c7cf493a2b0d4173ad0c5ae50d44ead9a8fad0444d19d749",
+      "acv_case_05.xlsx": "cc994bf2a1a197e05ef4f231186a7da990fc6203b842d94327181866d62cfe08",
+      "acv_case_06.xlsx": "6066b6882bf92af6b81fff311af870edf407f19257806f896a47b7e57e751172"
+    },
+    "code_hash": "8e3b2ffea23e24d6ee1b90b616ba9c723e1eeadeff06158790d747f889beeb04",
+    "excluded_models": [
+      {
+        "file": "catboost_ranker.json",
+        "reason": "No module named 'catboost'",
+        "status": "unavailable"
+      }
+    ],
+    "inner_summary": {
+      "cases": 6,
+      "primary_metric": 1.0,
+      "top1_accuracy": 1.0,
+      "top2_accuracy": 1.0,
+      "worst_rank": 1
+    },
+    "interpretation": "Nested development validation; six independent cases. Hidden-test accuracy is unknown.",
+    "model": "linear_ranker",
+    "nested_selector_cases": [
+      {
+        "faulty_car": "01",
+        "file_id": "acv_case_01.xlsx",
+        "rank": 1,
+        "ranking": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "08",
+          "07",
+          "05",
+          "06"
+        ],
+        "score": 1.0,
+        "selection": {
+          "baseline_params": {
+            "aggregation": "mean"
+          },
+          "inner_summary": {
+            "cases": 5,
+            "primary_metric": 1.0,
+            "top1_accuracy": 1.0,
+            "top2_accuracy": 1.0,
+            "worst_rank": 1
+          },
+          "model": "linear_ranker",
+          "params": {
+            "C": 1.0
+          },
+          "weight": 0.5
+        },
+        "top1": 1,
+        "top2": 1,
+        "training_files": [
+          "acv_case_02.xlsx",
+          "acv_case_03.xlsx",
+          "acv_case_04.xlsx",
+          "acv_case_05.xlsx",
+          "acv_case_06.xlsx"
+        ],
+        "training_hashes": {
+          "acv_case_02.xlsx": "869107ed17735efb55f6d33de2d0456a0b1e76aadbb280a9eef830f6778194c8",
+          "acv_case_03.xlsx": "07801fb08e6fc3654a23cd3d245fd89b327c5e9dd70880b2d80eb600b8d746c6",
+          "acv_case_04.xlsx": "650676c44e8f5979c7cf493a2b0d4173ad0c5ae50d44ead9a8fad0444d19d749",
+          "acv_case_05.xlsx": "cc994bf2a1a197e05ef4f231186a7da990fc6203b842d94327181866d62cfe08",
+          "acv_case_06.xlsx": "6066b6882bf92af6b81fff311af870edf407f19257806f896a47b7e57e751172"
+        }
+      },
+      {
+        "faulty_car": "02",
+        "file_id": "acv_case_02.xlsx",
+        "rank": 1,
+        "ranking": [
+          "02",
+          "03",
+          "08",
+          "01",
+          "07",
+          "04",
+          "06",
+          "05"
+        ],
+        "score": 1.0,
+        "selection": {
+          "baseline_params": {
+            "aggregation": "mean"
+          },
+          "inner_summary": {
+            "cases": 5,
+            "primary_metric": 1.0,
+            "top1_accuracy": 1.0,
+            "top2_accuracy": 1.0,
+            "worst_rank": 1
+          },
+          "model": "linear_ranker",
+          "params": {
+            "C": 1.0
+          },
+          "weight": 0.5
+        },
+        "top1": 1,
+        "top2": 1,
+        "training_files": [
+          "acv_case_01.xlsx",
+          "acv_case_03.xlsx",
+          "acv_case_04.xlsx",
+          "acv_case_05.xlsx",
+          "acv_case_06.xlsx"
+        ],
+        "training_hashes": {
+          "acv_case_01.xlsx": "d0657d45b52d12db8fbde52242f44f6efd0e3050d04822920aa3ca3b984af233",
+          "acv_case_03.xlsx": "07801fb08e6fc3654a23cd3d245fd89b327c5e9dd70880b2d80eb600b8d746c6",
+          "acv_case_04.xlsx": "650676c44e8f5979c7cf493a2b0d4173ad0c5ae50d44ead9a8fad0444d19d749",
+          "acv_case_05.xlsx": "cc994bf2a1a197e05ef4f231186a7da990fc6203b842d94327181866d62cfe08",
+          "acv_case_06.xlsx": "6066b6882bf92af6b81fff311af870edf407f19257806f896a47b7e57e751172"
+        }
+      },
+      {
+        "faulty_car": "03",
+        "file_id": "acv_case_03.xlsx",
+        "rank": 1,
+        "ranking": [
+          "03",
+          "02",
+          "01",
+          "08",
+          "04",
+          "07",
+          "05",
+          "06"
+        ],
+        "score": 1.0,
+        "selection": {
+          "baseline_params": {
+            "aggregation": "mean"
+          },
+          "inner_summary": {
+            "cases": 5,
+            "primary_metric": 1.0,
+            "top1_accuracy": 1.0,
+            "top2_accuracy": 1.0,
+            "worst_rank": 1
+          },
+          "model": "linear_ranker",
+          "params": {
+            "C": 0.01
+          },
+          "weight": 0.5
+        },
+        "top1": 1,
+        "top2": 1,
+        "training_files": [
+          "acv_case_01.xlsx",
+          "acv_case_02.xlsx",
+          "acv_case_04.xlsx",
+          "acv_case_05.xlsx",
+          "acv_case_06.xlsx"
+        ],
+        "training_hashes": {
+          "acv_case_01.xlsx": "d0657d45b52d12db8fbde52242f44f6efd0e3050d04822920aa3ca3b984af233",
+          "acv_case_02.xlsx": "869107ed17735efb55f6d33de2d0456a0b1e76aadbb280a9eef830f6778194c8",
+          "acv_case_04.xlsx": "650676c44e8f5979c7cf493a2b0d4173ad0c5ae50d44ead9a8fad0444d19d749",
+          "acv_case_05.xlsx": "cc994bf2a1a197e05ef4f231186a7da990fc6203b842d94327181866d62cfe08",
+          "acv_case_06.xlsx": "6066b6882bf92af6b81fff311af870edf407f19257806f896a47b7e57e751172"
+        }
+      },
+      {
+        "faulty_car": "01",
+        "file_id": "acv_case_04.xlsx",
+        "rank": 2,
+        "ranking": [
+          "04",
+          "01",
+          "05",
+          "06",
+          "07",
+          "08",
+          "03",
+          "02"
+        ],
+        "score": 0.875,
+        "selection": {
+          "baseline_params": {
+            "aggregation": "mean"
+          },
+          "inner_summary": {
+            "cases": 5,
+            "primary_metric": 1.0,
+            "top1_accuracy": 1.0,
+            "top2_accuracy": 1.0,
+            "worst_rank": 1
+          },
+          "model": "thermal",
+          "params": {
+            "aggregation": "mean"
+          },
+          "weight": 0.0
+        },
+        "top1": 0,
+        "top2": 1,
+        "training_files": [
+          "acv_case_01.xlsx",
+          "acv_case_02.xlsx",
+          "acv_case_03.xlsx",
+          "acv_case_05.xlsx",
+          "acv_case_06.xlsx"
+        ],
+        "training_hashes": {
+          "acv_case_01.xlsx": "d0657d45b52d12db8fbde52242f44f6efd0e3050d04822920aa3ca3b984af233",
+          "acv_case_02.xlsx": "869107ed17735efb55f6d33de2d0456a0b1e76aadbb280a9eef830f6778194c8",
+          "acv_case_03.xlsx": "07801fb08e6fc3654a23cd3d245fd89b327c5e9dd70880b2d80eb600b8d746c6",
+          "acv_case_05.xlsx": "cc994bf2a1a197e05ef4f231186a7da990fc6203b842d94327181866d62cfe08",
+          "acv_case_06.xlsx": "6066b6882bf92af6b81fff311af870edf407f19257806f896a47b7e57e751172"
+        }
+      },
+      {
+        "faulty_car": "04",
+        "file_id": "acv_case_05.xlsx",
+        "rank": 1,
+        "ranking": [
+          "04",
+          "02",
+          "07",
+          "01",
+          "06",
+          "03",
+          "08",
+          "05"
+        ],
+        "score": 1.0,
+        "selection": {
+          "baseline_params": {
+            "aggregation": "mean"
+          },
+          "inner_summary": {
+            "cases": 5,
+            "primary_metric": 1.0,
+            "top1_accuracy": 1.0,
+            "top2_accuracy": 1.0,
+            "worst_rank": 1
+          },
+          "model": "healthy_residual",
+          "params": {
+            "aggregation": "mean",
+            "alpha": 0.1
+          },
+          "weight": 0.25
+        },
+        "top1": 1,
+        "top2": 1,
+        "training_files": [
+          "acv_case_01.xlsx",
+          "acv_case_02.xlsx",
+          "acv_case_03.xlsx",
+          "acv_case_04.xlsx",
+          "acv_case_06.xlsx"
+        ],
+        "training_hashes": {
+          "acv_case_01.xlsx": "d0657d45b52d12db8fbde52242f44f6efd0e3050d04822920aa3ca3b984af233",
+          "acv_case_02.xlsx": "869107ed17735efb55f6d33de2d0456a0b1e76aadbb280a9eef830f6778194c8",
+          "acv_case_03.xlsx": "07801fb08e6fc3654a23cd3d245fd89b327c5e9dd70880b2d80eb600b8d746c6",
+          "acv_case_04.xlsx": "650676c44e8f5979c7cf493a2b0d4173ad0c5ae50d44ead9a8fad0444d19d749",
+          "acv_case_06.xlsx": "6066b6882bf92af6b81fff311af870edf407f19257806f896a47b7e57e751172"
+        }
+      },
+      {
+        "faulty_car": "06",
+        "file_id": "acv_case_06.xlsx",
+        "rank": 1,
+        "ranking": [
+          "06",
+          "08",
+          "04",
+          "02",
+          "05",
+          "03",
+          "01",
+          "07"
+        ],
+        "score": 1.0,
+        "selection": {
+          "baseline_params": {
+            "aggregation": "mean"
+          },
+          "inner_summary": {
+            "cases": 5,
+            "primary_metric": 1.0,
+            "top1_accuracy": 1.0,
+            "top2_accuracy": 1.0,
+            "worst_rank": 1
+          },
+          "model": "healthy_residual",
+          "params": {
+            "aggregation": "mean",
+            "alpha": 0.1
+          },
+          "weight": 0.25
+        },
+        "top1": 1,
+        "top2": 1,
+        "training_files": [
+          "acv_case_01.xlsx",
+          "acv_case_02.xlsx",
+          "acv_case_03.xlsx",
+          "acv_case_04.xlsx",
+          "acv_case_05.xlsx"
+        ],
+        "training_hashes": {
+          "acv_case_01.xlsx": "d0657d45b52d12db8fbde52242f44f6efd0e3050d04822920aa3ca3b984af233",
+          "acv_case_02.xlsx": "869107ed17735efb55f6d33de2d0456a0b1e76aadbb280a9eef830f6778194c8",
+          "acv_case_03.xlsx": "07801fb08e6fc3654a23cd3d245fd89b327c5e9dd70880b2d80eb600b8d746c6",
+          "acv_case_04.xlsx": "650676c44e8f5979c7cf493a2b0d4173ad0c5ae50d44ead9a8fad0444d19d749",
+          "acv_case_05.xlsx": "cc994bf2a1a197e05ef4f231186a7da990fc6203b842d94327181866d62cfe08"
+        }
+      }
+    ],
+    "params": {
+      "C": 0.01
+    },
+    "validation_summary": {
+      "cases": 6,
+      "primary_metric": 0.9791666666666666,
+      "top1_accuracy": 0.8333333333333334,
+      "top2_accuracy": 1.0,
+      "worst_rank": 2
+    },
+    "weight": 0.5
+  },
+  "training_files": [
+    "acv_case_01.xlsx",
+    "acv_case_02.xlsx",
+    "acv_case_03.xlsx",
+    "acv_case_04.xlsx",
+    "acv_case_05.xlsx",
+    "acv_case_06.xlsx"
+  ],
+  "training_hashes": {
+    "acv_case_01.xlsx": "d0657d45b52d12db8fbde52242f44f6efd0e3050d04822920aa3ca3b984af233",
+    "acv_case_02.xlsx": "869107ed17735efb55f6d33de2d0456a0b1e76aadbb280a9eef830f6778194c8",
+    "acv_case_03.xlsx": "07801fb08e6fc3654a23cd3d245fd89b327c5e9dd70880b2d80eb600b8d746c6",
+    "acv_case_04.xlsx": "650676c44e8f5979c7cf493a2b0d4173ad0c5ae50d44ead9a8fad0444d19d749",
+    "acv_case_05.xlsx": "cc994bf2a1a197e05ef4f231186a7da990fc6203b842d94327181866d62cfe08",
+    "acv_case_06.xlsx": "6066b6882bf92af6b81fff311af870edf407f19257806f896a47b7e57e751172"
+  },
+  "versions": {
+    "catboost": "not installed",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.17.1",
+    "streamlit": "1.61.1",
+    "torch": "2.10.0"
+  }
+}

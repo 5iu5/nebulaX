@@ -1,0 +1,124 @@
+{
+  "cases": {
+    "acv_case_04.xlsx": {
+      "cars": {
+        "01": {
+          "both_compressors_hours": 21.125,
+          "compressor_duty_imbalance": 0.3097386853448276,
+          "p1_high_comparison_hours": 23.308333333333334,
+          "p1_high_peer_residual_median": -100.0,
+          "p1_low_comparison_hours": 23.308333333333334,
+          "p1_low_peer_residual_median": 20.0,
+          "p2_high_comparison_hours": 20.491666666666667,
+          "p2_high_peer_residual_median": -140.0,
+          "p2_low_comparison_hours": 20.491666666666667,
+          "p2_low_peer_residual_median": -120.0,
+          "pressure_high_asymmetry": 300.0,
+          "pressure_low_asymmetry": 160.0
+        },
+        "02": {
+          "both_compressors_hours": 43.95,
+          "compressor_duty_imbalance": 0.011584051724138011,
+          "p1_high_comparison_hours": 43.13333333333333,
+          "p1_high_peer_residual_median": -60.0,
+          "p1_low_comparison_hours": 43.13333333333333,
+          "p1_low_peer_residual_median": 10.0,
+          "p2_high_comparison_hours": 40.90833333333333,
+          "p2_high_peer_residual_median": -40.0,
+          "p2_low_comparison_hours": 40.90833333333333,
+          "p2_low_peer_residual_median": 60.0,
+          "pressure_high_asymmetry": 120.0,
+          "pressure_low_asymmetry": 40.0
+        },
+        "03": {
+          "both_compressors_hours": 37.74166666666667,
+          "compressor_duty_imbalance": 0.006196120689655249,
+          "p1_high_comparison_hours": 40.53333333333333,
+          "p1_high_peer_residual_median": -20.0,
+          "p1_low_comparison_hours": 40.53333333333333,
+          "p1_low_peer_residual_median": 40.0,
+          "p2_high_comparison_hours": 38.36666666666667,
+          "p2_high_peer_residual_median": 10.0,
+          "p2_low_comparison_hours": 38.36666666666667,
+          "p2_low_peer_residual_median": 80.0,
+          "pressure_high_asymmetry": 80.0,
+          "pressure_low_asymmetry": 20.0
+        },
+        "04": {
+          "both_compressors_hours": 56.31666666666667,
+          "compressor_duty_imbalance": 0.002289870689655249,
+          "p1_high_comparison_hours": 40.35,
+          "p1_high_peer_residual_median": 160.0,
+          "p1_low_comparison_hours": 40.35,
+          "p1_low_peer_residual_median": -80.0,
+          "p2_high_comparison_hours": 40.358333333333334,
+          "p2_high_peer_residual_median": 60.0,
+          "p2_low_comparison_hours": 40.358333333333334,
+          "p2_low_peer_residual_median": -120.0,
+          "pressure_high_asymmetry": 120.0,
+          "pressure_low_asymmetry": 40.0
+        },
+        "05": {
+          "both_compressors_hours": 0.0,
+          "compressor_duty_imbalance": null,
+          "p1_high_comparison_hours": 0.0,
+          "p1_high_peer_residual_median": null,
+          "p1_low_comparison_hours": 0.0,
+          "p1_low_peer_residual_median": null,
+          "p2_high_comparison_hours": 0.0,
+          "p2_high_peer_residual_median": null,
+          "p2_low_comparison_hours": 0.0,
+          "p2_low_peer_residual_median": null,
+          "pressure_high_asymmetry": null,
+          "pressure_low_asymmetry": null
+        },
+        "06": {
+          "both_compressors_hours": 0.0,
+          "compressor_duty_imbalance": null,
+          "p1_high_comparison_hours": 0.0,
+          "p1_high_peer_residual_median": null,
+          "p1_low_comparison_hours": 0.0,
+          "p1_low_peer_residual_median": null,
+          "p2_high_comparison_hours": 0.0,
+          "p2_high_peer_residual_median": null,
+          "p2_low_comparison_hours": 0.0,
+          "p2_low_peer_residual_median": null,
+          "pressure_high_asymmetry": null,
+          "pressure_low_asymmetry": null
+        },
+        "07": {
+          "both_compressors_hours": 0.0,
+          "compressor_duty_imbalance": null,
+          "p1_high_comparison_hours": 0.0,
+          "p1_high_peer_residual_median": null,
+          "p1_low_comparison_hours": 0.0,
+          "p1_low_peer_residual_median": null,
+          "p2_high_comparison_hours": 0.0,
+          "p2_high_peer_residual_median": null,
+          "p2_low_comparison_hours": 0.0,
+          "p2_low_peer_residual_median": null,
+          "pressure_high_asymmetry": null,
+          "pressure_low_asymmetry": null
+        },
+        "08": {
+          "both_compressors_hours": 0.0,
+          "compressor_duty_imbalance": null,
+          "p1_high_comparison_hours": 0.0,
+          "p1_high_peer_residual_median": null,
+          "p1_low_comparison_hours": 0.0,
+          "p1_low_peer_residual_median": null,
+          "p2_high_comparison_hours": 0.0,
+          "p2_high_peer_residual_median": null,
+          "p2_low_comparison_hours": 0.0,
+          "p2_low_peer_residual_median": null,
+          "pressure_high_asymmetry": null,
+          "pressure_low_asymmetry": null
+        }
+      },
+      "source_hash": "650676c44e8f5979c7cf493a2b0d4173ad0c5ae50d44ead9a8fad0444d19d749"
+    }
+  },
+  "interpretation": "Diagnostic only: one rich case cannot validate a pressure fault predictor.",
+  "peer_rule": "At least two usable peers with the same simultaneous compressor states; candidate circuit on.",
+  "units": "Unspecified source units; differences are comparative, with no absolute operating limits."
+}

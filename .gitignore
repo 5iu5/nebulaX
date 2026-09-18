@@ -1,0 +1,45 @@
+# Python environments
+.venv/
+venv/
+env/
+
+# Python caches and build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editors and operating systems
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Local Streamlit secrets
+.streamlit/secrets.toml
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Generated ACV caches and browser artifacts
+outputs/acv/cache/
+outputs/acv/fit_cache/
+outputs/acv/browser/
+outputs/acv/wheelhouse/
+catboost_info/
+
+# Generated inference outputs (reference artifacts remain in each subsystem folder)
+outputs/door/
+outputs/shm/

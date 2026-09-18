@@ -1,0 +1,525 @@
+[
+  {
+    "cars": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08"
+    ],
+    "columns": 67,
+    "dominant_interval_seconds": 30.0,
+    "end": "2023-05-21 20:49:30",
+    "file_id": "acv_case_01.xlsx",
+    "model_family": "A",
+    "quality": {
+      "01": {
+        "available": true,
+        "invalid_fraction": 0.002244165170556553,
+        "missing_fraction": 0.4324955116696589,
+        "usable_hours": 48.35
+      },
+      "02": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.4324955116696589,
+        "usable_hours": 48.8
+      },
+      "03": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.4324955116696589,
+        "usable_hours": 48.8
+      },
+      "04": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.4324955116696589,
+        "usable_hours": 48.8
+      },
+      "05": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.4324955116696589,
+        "usable_hours": 48.8
+      },
+      "06": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.4324955116696589,
+        "usable_hours": 48.8
+      },
+      "07": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.4324955116696589,
+        "usable_hours": 48.8
+      },
+      "08": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.4324955116696589,
+        "usable_hours": 48.8
+      }
+    },
+    "rows": 6999,
+    "schema": "basic",
+    "sorted_input": true,
+    "source_hash": "d0657d45b52d12db8fbde52242f44f6efd0e3050d04822920aa3ca3b984af233",
+    "start": "2023-05-18 00:00:00",
+    "train": "0620",
+    "unavailable_cars": []
+  },
+  {
+    "cars": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08"
+    ],
+    "columns": 67,
+    "dominant_interval_seconds": 30.0,
+    "end": "2020-07-12 23:35:00",
+    "file_id": "acv_case_02.xlsx",
+    "model_family": "A",
+    "quality": {
+      "01": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.26928776915700464,
+        "usable_hours": 69.09166666666667
+      },
+      "02": {
+        "available": true,
+        "invalid_fraction": 0.003835759741957981,
+        "missing_fraction": 0.26928776915700464,
+        "usable_hours": 68.93333333333334
+      },
+      "03": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.26928776915700464,
+        "usable_hours": 69.08333333333333
+      },
+      "04": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.26928776915700464,
+        "usable_hours": 69.08333333333333
+      },
+      "05": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.26928776915700464,
+        "usable_hours": 69.09166666666667
+      },
+      "06": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.26928776915700464,
+        "usable_hours": 69.08333333333333
+      },
+      "07": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.26928776915700464,
+        "usable_hours": 69.08333333333333
+      },
+      "08": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.26928776915700464,
+        "usable_hours": 69.09166666666667
+      }
+    },
+    "rows": 9187,
+    "schema": "basic",
+    "sorted_input": true,
+    "source_hash": "869107ed17735efb55f6d33de2d0456a0b1e76aadbb280a9eef830f6778194c8",
+    "start": "2020-07-09 00:00:00",
+    "train": "0620",
+    "unavailable_cars": []
+  },
+  {
+    "cars": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08"
+    ],
+    "columns": 67,
+    "dominant_interval_seconds": 30.0,
+    "end": "2021-10-03 23:59:30",
+    "file_id": "acv_case_03.xlsx",
+    "model_family": "A",
+    "quality": {
+      "01": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.23677443056576047,
+        "usable_hours": 68.875
+      },
+      "02": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.23677443056576047,
+        "usable_hours": 68.475
+      },
+      "03": {
+        "available": true,
+        "invalid_fraction": 9.184423218221895e-05,
+        "missing_fraction": 0.23677443056576047,
+        "usable_hours": 68.46666666666667
+      },
+      "04": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.23677443056576047,
+        "usable_hours": 68.88333333333334
+      },
+      "05": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.23677443056576047,
+        "usable_hours": 68.88333333333334
+      },
+      "06": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.23677443056576047,
+        "usable_hours": 68.48333333333333
+      },
+      "07": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.23677443056576047,
+        "usable_hours": 68.48333333333333
+      },
+      "08": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.23677443056576047,
+        "usable_hours": 66.11666666666666
+      }
+    },
+    "rows": 8310,
+    "schema": "basic",
+    "sorted_input": true,
+    "source_hash": "07801fb08e6fc3654a23cd3d245fd89b327c5e9dd70880b2d80eb600b8d746c6",
+    "start": "2021-09-30 05:16:00",
+    "train": "0619",
+    "unavailable_cars": []
+  },
+  {
+    "cars": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08"
+    ],
+    "columns": 483,
+    "dominant_interval_seconds": 10.0,
+    "end": "2023-08-18 20:41:00",
+    "file_id": "acv_case_04.xlsx",
+    "model_family": "B",
+    "quality": {
+      "01": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.31324245374878285,
+        "usable_hours": 58.141666666666666
+      },
+      "02": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.31324245374878285,
+        "usable_hours": 59.93333333333333
+      },
+      "03": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.31324245374878285,
+        "usable_hours": 59.75
+      },
+      "04": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.3138266796494645,
+        "usable_hours": 60.03333333333333
+      },
+      "05": {
+        "available": false,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 1.0,
+        "usable_hours": 0.0
+      },
+      "06": {
+        "available": false,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 1.0,
+        "usable_hours": 0.0
+      },
+      "07": {
+        "available": false,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 1.0,
+        "usable_hours": 0.0
+      },
+      "08": {
+        "available": false,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 1.0,
+        "usable_hours": 0.0
+      }
+    },
+    "rows": 22262,
+    "schema": "rich",
+    "sorted_input": true,
+    "source_hash": "650676c44e8f5979c7cf493a2b0d4173ad0c5ae50d44ead9a8fad0444d19d749",
+    "start": "2023-08-15 07:06:50",
+    "train": "0208",
+    "unavailable_cars": [
+      "05",
+      "06",
+      "07",
+      "08"
+    ]
+  },
+  {
+    "cars": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08"
+    ],
+    "columns": 67,
+    "dominant_interval_seconds": 30.0,
+    "end": "2021-03-06 23:59:30",
+    "file_id": "acv_case_05.xlsx",
+    "model_family": "C",
+    "quality": {
+      "01": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.4147927894443412,
+        "usable_hours": 51.766666666666666
+      },
+      "02": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.4147927894443412,
+        "usable_hours": 51.775
+      },
+      "03": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.4147927894443412,
+        "usable_hours": 51.775
+      },
+      "04": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.4147927894443412,
+        "usable_hours": 51.708333333333336
+      },
+      "05": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.4147927894443412,
+        "usable_hours": 51.766666666666666
+      },
+      "06": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.4147927894443412,
+        "usable_hours": 51.775
+      },
+      "07": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.4147927894443412,
+        "usable_hours": 51.775
+      },
+      "08": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.4147927894443412,
+        "usable_hours": 51.75833333333333
+      }
+    },
+    "rows": 6972,
+    "schema": "basic",
+    "sorted_input": true,
+    "source_hash": "cc994bf2a1a197e05ef4f231186a7da990fc6203b842d94327181866d62cfe08",
+    "start": "2021-03-03 06:19:00",
+    "train": "0407",
+    "unavailable_cars": []
+  },
+  {
+    "cars": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08"
+    ],
+    "columns": 67,
+    "dominant_interval_seconds": 30.0,
+    "end": "2020-07-08 23:59:30",
+    "file_id": "acv_case_06.xlsx",
+    "model_family": "C",
+    "quality": {
+      "01": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.6294102159031069,
+        "usable_hours": 22.041666666666668
+      },
+      "02": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.6294102159031069,
+        "usable_hours": 21.966666666666665
+      },
+      "03": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.6294102159031069,
+        "usable_hours": 21.975
+      },
+      "04": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.6294102159031069,
+        "usable_hours": 21.991666666666667
+      },
+      "05": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.6294102159031069,
+        "usable_hours": 21.966666666666665
+      },
+      "06": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.6294102159031069,
+        "usable_hours": 21.983333333333334
+      },
+      "07": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.6294102159031069,
+        "usable_hours": 21.975
+      },
+      "08": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.6294102159031069,
+        "usable_hours": 21.991666666666667
+      }
+    },
+    "rows": 3263,
+    "schema": "basic",
+    "sorted_input": true,
+    "source_hash": "6066b6882bf92af6b81fff311af870edf407f19257806f896a47b7e57e751172",
+    "start": "2020-07-06 08:42:00",
+    "train": "0408",
+    "unavailable_cars": []
+  },
+  {
+    "cars": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08"
+    ],
+    "columns": 67,
+    "dominant_interval_seconds": 30.0,
+    "end": "2021-06-27 23:59:30",
+    "file_id": "acv_test_case.xlsx",
+    "model_family": "A",
+    "quality": {
+      "01": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.3043402777777778,
+        "usable_hours": 65.6
+      },
+      "02": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.3043402777777778,
+        "usable_hours": 65.59166666666667
+      },
+      "03": {
+        "available": true,
+        "invalid_fraction": 8.680555555555556e-05,
+        "missing_fraction": 0.3043402777777778,
+        "usable_hours": 65.6
+      },
+      "04": {
+        "available": true,
+        "invalid_fraction": 0.0016493055555555556,
+        "missing_fraction": 0.3043402777777778,
+        "usable_hours": 65.45
+      },
+      "05": {
+        "available": true,
+        "invalid_fraction": 0.00017361111111111112,
+        "missing_fraction": 0.3043402777777778,
+        "usable_hours": 65.63333333333334
+      },
+      "06": {
+        "available": true,
+        "invalid_fraction": 8.680555555555556e-05,
+        "missing_fraction": 0.3043402777777778,
+        "usable_hours": 65.625
+      },
+      "07": {
+        "available": true,
+        "invalid_fraction": 0.00017361111111111112,
+        "missing_fraction": 0.3043402777777778,
+        "usable_hours": 65.63333333333334
+      },
+      "08": {
+        "available": true,
+        "invalid_fraction": 0.0,
+        "missing_fraction": 0.3043402777777778,
+        "usable_hours": 65.63333333333334
+      }
+    },
+    "rows": 9082,
+    "schema": "basic",
+    "sorted_input": true,
+    "source_hash": "948a5bcbb0bdc22c0fb492abb0e9025a773b16f75209dbe1af656f2a436bad32",
+    "start": "2021-06-24 00:00:00",
+    "train": "0620",
+    "unavailable_cars": []
+  }
+]

@@ -1,0 +1,1512 @@
+{
+  "ablations": {
+    "no_peer": {
+      "cases": [
+        {
+          "faulty_car": "01",
+          "file_id": "acv_case_01.xlsx",
+          "rank": 1,
+          "ranking": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "07",
+            "08",
+            "05",
+            "06"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1
+        },
+        {
+          "faulty_car": "02",
+          "file_id": "acv_case_02.xlsx",
+          "rank": 1,
+          "ranking": [
+            "02",
+            "03",
+            "07",
+            "08",
+            "06",
+            "01",
+            "04",
+            "05"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1
+        },
+        {
+          "faulty_car": "03",
+          "file_id": "acv_case_03.xlsx",
+          "rank": 1,
+          "ranking": [
+            "03",
+            "02",
+            "01",
+            "07",
+            "04",
+            "08",
+            "05",
+            "06"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1
+        },
+        {
+          "faulty_car": "01",
+          "file_id": "acv_case_04.xlsx",
+          "rank": 2,
+          "ranking": [
+            "04",
+            "01",
+            "05",
+            "06",
+            "07",
+            "08",
+            "03",
+            "02"
+          ],
+          "score": 0.875,
+          "top1": 0,
+          "top2": 1
+        },
+        {
+          "faulty_car": "04",
+          "file_id": "acv_case_05.xlsx",
+          "rank": 1,
+          "ranking": [
+            "04",
+            "02",
+            "07",
+            "01",
+            "06",
+            "03",
+            "08",
+            "05"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1
+        },
+        {
+          "faulty_car": "06",
+          "file_id": "acv_case_06.xlsx",
+          "rank": 1,
+          "ranking": [
+            "06",
+            "08",
+            "04",
+            "02",
+            "03",
+            "05",
+            "01",
+            "07"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1
+        }
+      ],
+      "interpretation": "Exploratory diagnostic; not used for model selection",
+      "summary": {
+        "cases": 6,
+        "primary_metric": 0.9791666666666666,
+        "top1_accuracy": 0.8333333333333334,
+        "top2_accuracy": 1.0,
+        "worst_rank": 2
+      }
+    },
+    "quality_only": {
+      "cases": [
+        {
+          "faulty_car": "01",
+          "file_id": "acv_case_01.xlsx",
+          "rank": 1,
+          "ranking": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1
+        },
+        {
+          "faulty_car": "02",
+          "file_id": "acv_case_02.xlsx",
+          "rank": 1,
+          "ranking": [
+            "02",
+            "01",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1
+        },
+        {
+          "faulty_car": "03",
+          "file_id": "acv_case_03.xlsx",
+          "rank": 1,
+          "ranking": [
+            "03",
+            "01",
+            "02",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1
+        },
+        {
+          "faulty_car": "01",
+          "file_id": "acv_case_04.xlsx",
+          "rank": 1,
+          "ranking": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1
+        },
+        {
+          "faulty_car": "04",
+          "file_id": "acv_case_05.xlsx",
+          "rank": 4,
+          "ranking": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08"
+          ],
+          "score": 0.625,
+          "top1": 0,
+          "top2": 0
+        },
+        {
+          "faulty_car": "06",
+          "file_id": "acv_case_06.xlsx",
+          "rank": 6,
+          "ranking": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08"
+          ],
+          "score": 0.375,
+          "top1": 0,
+          "top2": 0
+        }
+      ],
+      "interpretation": "Exploratory diagnostic; not used for model selection",
+      "summary": {
+        "cases": 6,
+        "primary_metric": 0.8333333333333334,
+        "top1_accuracy": 0.6666666666666666,
+        "top2_accuracy": 0.6666666666666666,
+        "worst_rank": 6
+      }
+    },
+    "steady_only": {
+      "cases": [
+        {
+          "faulty_car": "01",
+          "file_id": "acv_case_01.xlsx",
+          "rank": 1,
+          "ranking": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "07",
+            "08",
+            "05",
+            "06"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1
+        },
+        {
+          "faulty_car": "02",
+          "file_id": "acv_case_02.xlsx",
+          "rank": 1,
+          "ranking": [
+            "02",
+            "03",
+            "08",
+            "01",
+            "07",
+            "06",
+            "04",
+            "05"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1
+        },
+        {
+          "faulty_car": "03",
+          "file_id": "acv_case_03.xlsx",
+          "rank": 1,
+          "ranking": [
+            "03",
+            "02",
+            "01",
+            "07",
+            "04",
+            "08",
+            "05",
+            "06"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1
+        },
+        {
+          "faulty_car": "01",
+          "file_id": "acv_case_04.xlsx",
+          "rank": 2,
+          "ranking": [
+            "04",
+            "01",
+            "05",
+            "06",
+            "07",
+            "08",
+            "03",
+            "02"
+          ],
+          "score": 0.875,
+          "top1": 0,
+          "top2": 1
+        },
+        {
+          "faulty_car": "04",
+          "file_id": "acv_case_05.xlsx",
+          "rank": 2,
+          "ranking": [
+            "02",
+            "04",
+            "07",
+            "01",
+            "06",
+            "03",
+            "08",
+            "05"
+          ],
+          "score": 0.875,
+          "top1": 0,
+          "top2": 1
+        },
+        {
+          "faulty_car": "06",
+          "file_id": "acv_case_06.xlsx",
+          "rank": 1,
+          "ranking": [
+            "06",
+            "08",
+            "04",
+            "02",
+            "05",
+            "03",
+            "01",
+            "07"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1
+        }
+      ],
+      "interpretation": "Exploratory diagnostic; not used for model selection",
+      "summary": {
+        "cases": 6,
+        "primary_metric": 0.9583333333333334,
+        "top1_accuracy": 0.6666666666666666,
+        "top2_accuracy": 1.0,
+        "worst_rank": 2
+      }
+    },
+    "thermal_native": {
+      "cases": [
+        {
+          "faulty_car": "01",
+          "file_id": "acv_case_01.xlsx",
+          "rank": 1,
+          "ranking": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "07",
+            "08",
+            "05",
+            "06"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1
+        },
+        {
+          "faulty_car": "02",
+          "file_id": "acv_case_02.xlsx",
+          "rank": 1,
+          "ranking": [
+            "02",
+            "03",
+            "08",
+            "07",
+            "06",
+            "01",
+            "04",
+            "05"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1
+        },
+        {
+          "faulty_car": "03",
+          "file_id": "acv_case_03.xlsx",
+          "rank": 1,
+          "ranking": [
+            "03",
+            "02",
+            "01",
+            "07",
+            "04",
+            "08",
+            "05",
+            "06"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1
+        },
+        {
+          "faulty_car": "01",
+          "file_id": "acv_case_04.xlsx",
+          "rank": 2,
+          "ranking": [
+            "04",
+            "01",
+            "05",
+            "06",
+            "07",
+            "08",
+            "03",
+            "02"
+          ],
+          "score": 0.875,
+          "top1": 0,
+          "top2": 1
+        },
+        {
+          "faulty_car": "04",
+          "file_id": "acv_case_05.xlsx",
+          "rank": 1,
+          "ranking": [
+            "04",
+            "02",
+            "07",
+            "01",
+            "06",
+            "03",
+            "08",
+            "05"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1
+        },
+        {
+          "faulty_car": "06",
+          "file_id": "acv_case_06.xlsx",
+          "rank": 1,
+          "ranking": [
+            "06",
+            "08",
+            "04",
+            "02",
+            "05",
+            "03",
+            "01",
+            "07"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1
+        }
+      ],
+      "interpretation": "Exploratory diagnostic; not used for model selection",
+      "summary": {
+        "cases": 6,
+        "primary_metric": 0.9791666666666666,
+        "top1_accuracy": 0.8333333333333334,
+        "top2_accuracy": 1.0,
+        "worst_rank": 2
+      }
+    }
+  },
+  "bootstrap": {
+    "acv_case_01.xlsx": {
+      "blocks": 61,
+      "cars": {
+        "01": {
+          "median_rank": 1.0,
+          "rank_p05": 1.0,
+          "rank_p95": 1.0,
+          "top1_frequency": 1.0
+        },
+        "02": {
+          "median_rank": 3.0,
+          "rank_p05": 2.0,
+          "rank_p95": 4.0,
+          "top1_frequency": 0.0
+        },
+        "03": {
+          "median_rank": 2.0,
+          "rank_p05": 2.0,
+          "rank_p95": 3.0,
+          "top1_frequency": 0.0
+        },
+        "04": {
+          "median_rank": 4.0,
+          "rank_p05": 3.0,
+          "rank_p95": 5.0,
+          "top1_frequency": 0.0
+        },
+        "05": {
+          "median_rank": 7.0,
+          "rank_p05": 6.0,
+          "rank_p95": 8.0,
+          "top1_frequency": 0.0
+        },
+        "06": {
+          "median_rank": 8.0,
+          "rank_p05": 7.0,
+          "rank_p95": 8.0,
+          "top1_frequency": 0.0
+        },
+        "07": {
+          "median_rank": 5.0,
+          "rank_p05": 4.0,
+          "rank_p95": 6.0,
+          "top1_frequency": 0.0
+        },
+        "08": {
+          "median_rank": 6.0,
+          "rank_p05": 5.0,
+          "rank_p95": 7.0,
+          "top1_frequency": 0.0
+        }
+      },
+      "method": "Synchronized hourly bootstrap of mean hourly model evidence (not a calibrated full-case confidence interval)",
+      "samples": 200,
+      "seed": 42
+    },
+    "acv_case_02.xlsx": {
+      "blocks": 84,
+      "cars": {
+        "01": {
+          "median_rank": 7.0,
+          "rank_p05": 5.0,
+          "rank_p95": 7.0,
+          "top1_frequency": 0.0
+        },
+        "02": {
+          "median_rank": 1.0,
+          "rank_p05": 1.0,
+          "rank_p95": 2.0,
+          "top1_frequency": 0.92
+        },
+        "03": {
+          "median_rank": 2.0,
+          "rank_p05": 1.0,
+          "rank_p95": 2.0,
+          "top1_frequency": 0.08
+        },
+        "04": {
+          "median_rank": 6.0,
+          "rank_p05": 4.0,
+          "rank_p95": 7.0,
+          "top1_frequency": 0.0
+        },
+        "05": {
+          "median_rank": 8.0,
+          "rank_p05": 8.0,
+          "rank_p95": 8.0,
+          "top1_frequency": 0.0
+        },
+        "06": {
+          "median_rank": 4.0,
+          "rank_p05": 3.0,
+          "rank_p95": 6.0,
+          "top1_frequency": 0.0
+        },
+        "07": {
+          "median_rank": 3.0,
+          "rank_p05": 3.0,
+          "rank_p95": 5.0,
+          "top1_frequency": 0.0
+        },
+        "08": {
+          "median_rank": 5.0,
+          "rank_p05": 3.0,
+          "rank_p95": 6.0,
+          "top1_frequency": 0.0
+        }
+      },
+      "method": "Synchronized hourly bootstrap of mean hourly model evidence (not a calibrated full-case confidence interval)",
+      "samples": 200,
+      "seed": 42
+    },
+    "acv_case_03.xlsx": {
+      "blocks": 75,
+      "cars": {
+        "01": {
+          "median_rank": 3.0,
+          "rank_p05": 3.0,
+          "rank_p95": 4.0,
+          "top1_frequency": 0.0
+        },
+        "02": {
+          "median_rank": 2.0,
+          "rank_p05": 2.0,
+          "rank_p95": 2.0,
+          "top1_frequency": 0.0
+        },
+        "03": {
+          "median_rank": 1.0,
+          "rank_p05": 1.0,
+          "rank_p95": 1.0,
+          "top1_frequency": 1.0
+        },
+        "04": {
+          "median_rank": 5.0,
+          "rank_p05": 4.0,
+          "rank_p95": 6.0,
+          "top1_frequency": 0.0
+        },
+        "05": {
+          "median_rank": 7.0,
+          "rank_p05": 6.0,
+          "rank_p95": 8.0,
+          "top1_frequency": 0.0
+        },
+        "06": {
+          "median_rank": 8.0,
+          "rank_p05": 7.0,
+          "rank_p95": 8.0,
+          "top1_frequency": 0.0
+        },
+        "07": {
+          "median_rank": 4.0,
+          "rank_p05": 3.950000000000001,
+          "rank_p95": 5.0,
+          "top1_frequency": 0.0
+        },
+        "08": {
+          "median_rank": 6.0,
+          "rank_p05": 5.0,
+          "rank_p95": 7.0,
+          "top1_frequency": 0.0
+        }
+      },
+      "method": "Synchronized hourly bootstrap of mean hourly model evidence (not a calibrated full-case confidence interval)",
+      "samples": 200,
+      "seed": 42
+    },
+    "acv_case_04.xlsx": {
+      "blocks": 64,
+      "cars": {
+        "01": {
+          "median_rank": 2.0,
+          "rank_p05": 2.0,
+          "rank_p95": 2.0,
+          "top1_frequency": 0.0
+        },
+        "02": {
+          "median_rank": 8.0,
+          "rank_p05": 8.0,
+          "rank_p95": 8.0,
+          "top1_frequency": 0.0
+        },
+        "03": {
+          "median_rank": 7.0,
+          "rank_p05": 7.0,
+          "rank_p95": 7.0,
+          "top1_frequency": 0.0
+        },
+        "04": {
+          "median_rank": 1.0,
+          "rank_p05": 1.0,
+          "rank_p95": 1.0,
+          "top1_frequency": 1.0
+        },
+        "05": {
+          "median_rank": 3.0,
+          "rank_p05": 3.0,
+          "rank_p95": 3.0,
+          "top1_frequency": 0.0
+        },
+        "06": {
+          "median_rank": 4.0,
+          "rank_p05": 4.0,
+          "rank_p95": 4.0,
+          "top1_frequency": 0.0
+        },
+        "07": {
+          "median_rank": 5.0,
+          "rank_p05": 5.0,
+          "rank_p95": 5.0,
+          "top1_frequency": 0.0
+        },
+        "08": {
+          "median_rank": 6.0,
+          "rank_p05": 6.0,
+          "rank_p95": 6.0,
+          "top1_frequency": 0.0
+        }
+      },
+      "method": "Synchronized hourly bootstrap of mean hourly model evidence (not a calibrated full-case confidence interval)",
+      "samples": 200,
+      "seed": 42
+    },
+    "acv_case_05.xlsx": {
+      "blocks": 65,
+      "cars": {
+        "01": {
+          "median_rank": 5.0,
+          "rank_p05": 4.0,
+          "rank_p95": 5.0,
+          "top1_frequency": 0.0
+        },
+        "02": {
+          "median_rank": 2.0,
+          "rank_p05": 1.0,
+          "rank_p95": 2.0,
+          "top1_frequency": 0.405
+        },
+        "03": {
+          "median_rank": 6.0,
+          "rank_p05": 6.0,
+          "rank_p95": 6.0,
+          "top1_frequency": 0.0
+        },
+        "04": {
+          "median_rank": 1.0,
+          "rank_p05": 1.0,
+          "rank_p95": 2.0,
+          "top1_frequency": 0.595
+        },
+        "05": {
+          "median_rank": 8.0,
+          "rank_p05": 8.0,
+          "rank_p95": 8.0,
+          "top1_frequency": 0.0
+        },
+        "06": {
+          "median_rank": 4.0,
+          "rank_p05": 4.0,
+          "rank_p95": 5.0,
+          "top1_frequency": 0.0
+        },
+        "07": {
+          "median_rank": 3.0,
+          "rank_p05": 3.0,
+          "rank_p95": 3.0,
+          "top1_frequency": 0.0
+        },
+        "08": {
+          "median_rank": 7.0,
+          "rank_p05": 7.0,
+          "rank_p95": 7.0,
+          "top1_frequency": 0.0
+        }
+      },
+      "method": "Synchronized hourly bootstrap of mean hourly model evidence (not a calibrated full-case confidence interval)",
+      "samples": 200,
+      "seed": 42
+    },
+    "acv_case_06.xlsx": {
+      "blocks": 35,
+      "cars": {
+        "01": {
+          "median_rank": 7.0,
+          "rank_p05": 7.0,
+          "rank_p95": 7.0,
+          "top1_frequency": 0.0
+        },
+        "02": {
+          "median_rank": 4.0,
+          "rank_p05": 3.0,
+          "rank_p95": 5.0,
+          "top1_frequency": 0.0
+        },
+        "03": {
+          "median_rank": 6.0,
+          "rank_p05": 5.0,
+          "rank_p95": 6.0,
+          "top1_frequency": 0.0
+        },
+        "04": {
+          "median_rank": 3.0,
+          "rank_p05": 2.0,
+          "rank_p95": 4.0,
+          "top1_frequency": 0.0
+        },
+        "05": {
+          "median_rank": 5.0,
+          "rank_p05": 4.0,
+          "rank_p95": 6.0,
+          "top1_frequency": 0.0
+        },
+        "06": {
+          "median_rank": 1.0,
+          "rank_p05": 1.0,
+          "rank_p95": 1.0,
+          "top1_frequency": 1.0
+        },
+        "07": {
+          "median_rank": 8.0,
+          "rank_p05": 8.0,
+          "rank_p95": 8.0,
+          "top1_frequency": 0.0
+        },
+        "08": {
+          "median_rank": 2.0,
+          "rank_p05": 2.0,
+          "rank_p95": 3.0,
+          "top1_frequency": 0.0
+        }
+      },
+      "method": "Synchronized hourly bootstrap of mean hourly model evidence (not a calibrated full-case confidence interval)",
+      "samples": 200,
+      "seed": 42
+    }
+  },
+  "grouped": {
+    "model_family": {
+      "cases": [
+        {
+          "faulty_car": "01",
+          "file_id": "acv_case_01.xlsx",
+          "held_out_group": "A",
+          "rank": 1,
+          "ranking": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "08",
+            "05",
+            "07",
+            "06"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1,
+          "training_files": [
+            "acv_case_04.xlsx",
+            "acv_case_05.xlsx",
+            "acv_case_06.xlsx"
+          ]
+        },
+        {
+          "faulty_car": "02",
+          "file_id": "acv_case_02.xlsx",
+          "held_out_group": "A",
+          "rank": 1,
+          "ranking": [
+            "02",
+            "03",
+            "08",
+            "01",
+            "07",
+            "04",
+            "06",
+            "05"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1,
+          "training_files": [
+            "acv_case_04.xlsx",
+            "acv_case_05.xlsx",
+            "acv_case_06.xlsx"
+          ]
+        },
+        {
+          "faulty_car": "03",
+          "file_id": "acv_case_03.xlsx",
+          "held_out_group": "A",
+          "rank": 1,
+          "ranking": [
+            "03",
+            "02",
+            "01",
+            "08",
+            "04",
+            "07",
+            "05",
+            "06"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1,
+          "training_files": [
+            "acv_case_04.xlsx",
+            "acv_case_05.xlsx",
+            "acv_case_06.xlsx"
+          ]
+        },
+        {
+          "faulty_car": "01",
+          "file_id": "acv_case_04.xlsx",
+          "held_out_group": "B",
+          "rank": 1,
+          "ranking": [
+            "01",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "03",
+            "02"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1,
+          "training_files": [
+            "acv_case_01.xlsx",
+            "acv_case_02.xlsx",
+            "acv_case_03.xlsx",
+            "acv_case_05.xlsx",
+            "acv_case_06.xlsx"
+          ]
+        },
+        {
+          "faulty_car": "04",
+          "file_id": "acv_case_05.xlsx",
+          "held_out_group": "C",
+          "rank": 1,
+          "ranking": [
+            "04",
+            "02",
+            "07",
+            "01",
+            "06",
+            "03",
+            "08",
+            "05"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1,
+          "training_files": [
+            "acv_case_01.xlsx",
+            "acv_case_02.xlsx",
+            "acv_case_03.xlsx",
+            "acv_case_04.xlsx"
+          ]
+        },
+        {
+          "faulty_car": "06",
+          "file_id": "acv_case_06.xlsx",
+          "held_out_group": "C",
+          "rank": 1,
+          "ranking": [
+            "06",
+            "08",
+            "02",
+            "04",
+            "03",
+            "05",
+            "01",
+            "07"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1,
+          "training_files": [
+            "acv_case_01.xlsx",
+            "acv_case_02.xlsx",
+            "acv_case_03.xlsx",
+            "acv_case_04.xlsx"
+          ]
+        }
+      ],
+      "interpretation": "Frozen-hyperparameter stress test",
+      "summary": {
+        "cases": 6,
+        "primary_metric": 1.0,
+        "top1_accuracy": 1.0,
+        "top2_accuracy": 1.0,
+        "worst_rank": 1
+      }
+    },
+    "train": {
+      "cases": [
+        {
+          "faulty_car": "01",
+          "file_id": "acv_case_04.xlsx",
+          "held_out_group": "0208",
+          "rank": 1,
+          "ranking": [
+            "01",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "03",
+            "02"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1,
+          "training_files": [
+            "acv_case_01.xlsx",
+            "acv_case_02.xlsx",
+            "acv_case_03.xlsx",
+            "acv_case_05.xlsx",
+            "acv_case_06.xlsx"
+          ]
+        },
+        {
+          "faulty_car": "04",
+          "file_id": "acv_case_05.xlsx",
+          "held_out_group": "0407",
+          "rank": 1,
+          "ranking": [
+            "04",
+            "02",
+            "01",
+            "07",
+            "06",
+            "03",
+            "08",
+            "05"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1,
+          "training_files": [
+            "acv_case_01.xlsx",
+            "acv_case_02.xlsx",
+            "acv_case_03.xlsx",
+            "acv_case_04.xlsx",
+            "acv_case_06.xlsx"
+          ]
+        },
+        {
+          "faulty_car": "06",
+          "file_id": "acv_case_06.xlsx",
+          "held_out_group": "0408",
+          "rank": 1,
+          "ranking": [
+            "06",
+            "08",
+            "02",
+            "04",
+            "03",
+            "05",
+            "01",
+            "07"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1,
+          "training_files": [
+            "acv_case_01.xlsx",
+            "acv_case_02.xlsx",
+            "acv_case_03.xlsx",
+            "acv_case_04.xlsx",
+            "acv_case_05.xlsx"
+          ]
+        },
+        {
+          "faulty_car": "03",
+          "file_id": "acv_case_03.xlsx",
+          "held_out_group": "0619",
+          "rank": 1,
+          "ranking": [
+            "03",
+            "02",
+            "01",
+            "08",
+            "04",
+            "07",
+            "05",
+            "06"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1,
+          "training_files": [
+            "acv_case_01.xlsx",
+            "acv_case_02.xlsx",
+            "acv_case_04.xlsx",
+            "acv_case_05.xlsx",
+            "acv_case_06.xlsx"
+          ]
+        },
+        {
+          "faulty_car": "01",
+          "file_id": "acv_case_01.xlsx",
+          "held_out_group": "0620",
+          "rank": 1,
+          "ranking": [
+            "01",
+            "02",
+            "03",
+            "04",
+            "08",
+            "07",
+            "05",
+            "06"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1,
+          "training_files": [
+            "acv_case_03.xlsx",
+            "acv_case_04.xlsx",
+            "acv_case_05.xlsx",
+            "acv_case_06.xlsx"
+          ]
+        },
+        {
+          "faulty_car": "02",
+          "file_id": "acv_case_02.xlsx",
+          "held_out_group": "0620",
+          "rank": 1,
+          "ranking": [
+            "02",
+            "03",
+            "08",
+            "01",
+            "07",
+            "04",
+            "06",
+            "05"
+          ],
+          "score": 1.0,
+          "top1": 1,
+          "top2": 1,
+          "training_files": [
+            "acv_case_03.xlsx",
+            "acv_case_04.xlsx",
+            "acv_case_05.xlsx",
+            "acv_case_06.xlsx"
+          ]
+        }
+      ],
+      "interpretation": "Frozen-hyperparameter stress test",
+      "summary": {
+        "cases": 6,
+        "primary_metric": 1.0,
+        "top1_accuracy": 1.0,
+        "top2_accuracy": 1.0,
+        "worst_rank": 1
+      }
+    }
+  },
+  "truncation": [
+    {
+      "faulty_car": "01",
+      "file_id": "acv_case_01.xlsx",
+      "hours": 6,
+      "interpretation": "Descriptive training-case perturbation",
+      "rank": 1,
+      "ranking": [
+        "01",
+        "02",
+        "03",
+        "08",
+        "04",
+        "06",
+        "07",
+        "05"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    },
+    {
+      "faulty_car": "01",
+      "file_id": "acv_case_01.xlsx",
+      "hours": 12,
+      "interpretation": "Descriptive training-case perturbation",
+      "rank": 1,
+      "ranking": [
+        "01",
+        "02",
+        "03",
+        "08",
+        "04",
+        "06",
+        "07",
+        "05"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    },
+    {
+      "faulty_car": "01",
+      "file_id": "acv_case_01.xlsx",
+      "hours": 24,
+      "interpretation": "Descriptive training-case perturbation",
+      "rank": 1,
+      "ranking": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "07",
+        "05",
+        "06",
+        "08"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    },
+    {
+      "faulty_car": "02",
+      "file_id": "acv_case_02.xlsx",
+      "hours": 6,
+      "interpretation": "Descriptive training-case perturbation",
+      "rank": 1,
+      "ranking": [
+        "02",
+        "03",
+        "08",
+        "04",
+        "07",
+        "01",
+        "05",
+        "06"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    },
+    {
+      "faulty_car": "02",
+      "file_id": "acv_case_02.xlsx",
+      "hours": 12,
+      "interpretation": "Descriptive training-case perturbation",
+      "rank": 1,
+      "ranking": [
+        "02",
+        "03",
+        "01",
+        "06",
+        "08",
+        "07",
+        "05",
+        "04"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    },
+    {
+      "faulty_car": "02",
+      "file_id": "acv_case_02.xlsx",
+      "hours": 24,
+      "interpretation": "Descriptive training-case perturbation",
+      "rank": 1,
+      "ranking": [
+        "02",
+        "03",
+        "01",
+        "04",
+        "08",
+        "07",
+        "06",
+        "05"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    },
+    {
+      "faulty_car": "03",
+      "file_id": "acv_case_03.xlsx",
+      "hours": 6,
+      "interpretation": "Descriptive training-case perturbation",
+      "rank": 1,
+      "ranking": [
+        "03",
+        "01",
+        "07",
+        "02",
+        "04",
+        "08",
+        "06",
+        "05"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    },
+    {
+      "faulty_car": "03",
+      "file_id": "acv_case_03.xlsx",
+      "hours": 12,
+      "interpretation": "Descriptive training-case perturbation",
+      "rank": 1,
+      "ranking": [
+        "03",
+        "01",
+        "02",
+        "08",
+        "07",
+        "04",
+        "05",
+        "06"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    },
+    {
+      "faulty_car": "03",
+      "file_id": "acv_case_03.xlsx",
+      "hours": 24,
+      "interpretation": "Descriptive training-case perturbation",
+      "rank": 1,
+      "ranking": [
+        "03",
+        "02",
+        "01",
+        "04",
+        "08",
+        "07",
+        "06",
+        "05"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    },
+    {
+      "faulty_car": "01",
+      "file_id": "acv_case_04.xlsx",
+      "hours": 6,
+      "interpretation": "Descriptive training-case perturbation",
+      "rank": 2,
+      "ranking": [
+        "04",
+        "01",
+        "05",
+        "06",
+        "07",
+        "08",
+        "03",
+        "02"
+      ],
+      "score": 0.875,
+      "top1": 0,
+      "top2": 1
+    },
+    {
+      "faulty_car": "01",
+      "file_id": "acv_case_04.xlsx",
+      "hours": 12,
+      "interpretation": "Descriptive training-case perturbation",
+      "rank": 1,
+      "ranking": [
+        "01",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "03",
+        "02"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    },
+    {
+      "faulty_car": "01",
+      "file_id": "acv_case_04.xlsx",
+      "hours": 24,
+      "interpretation": "Descriptive training-case perturbation",
+      "rank": 1,
+      "ranking": [
+        "01",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "03",
+        "02"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    },
+    {
+      "faulty_car": "04",
+      "file_id": "acv_case_05.xlsx",
+      "hours": 6,
+      "interpretation": "Descriptive training-case perturbation",
+      "rank": 3,
+      "ranking": [
+        "02",
+        "01",
+        "04",
+        "07",
+        "03",
+        "06",
+        "08",
+        "05"
+      ],
+      "score": 0.75,
+      "top1": 0,
+      "top2": 0
+    },
+    {
+      "faulty_car": "04",
+      "file_id": "acv_case_05.xlsx",
+      "hours": 12,
+      "interpretation": "Descriptive training-case perturbation",
+      "rank": 2,
+      "ranking": [
+        "02",
+        "04",
+        "07",
+        "01",
+        "06",
+        "03",
+        "08",
+        "05"
+      ],
+      "score": 0.875,
+      "top1": 0,
+      "top2": 1
+    },
+    {
+      "faulty_car": "04",
+      "file_id": "acv_case_05.xlsx",
+      "hours": 24,
+      "interpretation": "Descriptive training-case perturbation",
+      "rank": 2,
+      "ranking": [
+        "02",
+        "04",
+        "07",
+        "01",
+        "03",
+        "06",
+        "08",
+        "05"
+      ],
+      "score": 0.875,
+      "top1": 0,
+      "top2": 1
+    },
+    {
+      "faulty_car": "06",
+      "file_id": "acv_case_06.xlsx",
+      "hours": 6,
+      "interpretation": "Descriptive training-case perturbation",
+      "rank": 1,
+      "ranking": [
+        "06",
+        "04",
+        "05",
+        "02",
+        "03",
+        "08",
+        "01",
+        "07"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    },
+    {
+      "faulty_car": "06",
+      "file_id": "acv_case_06.xlsx",
+      "hours": 12,
+      "interpretation": "Descriptive training-case perturbation",
+      "rank": 1,
+      "ranking": [
+        "06",
+        "04",
+        "03",
+        "05",
+        "08",
+        "02",
+        "01",
+        "07"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    },
+    {
+      "faulty_car": "06",
+      "file_id": "acv_case_06.xlsx",
+      "hours": 24,
+      "interpretation": "Descriptive training-case perturbation",
+      "rank": 1,
+      "ranking": [
+        "06",
+        "08",
+        "04",
+        "05",
+        "01",
+        "03",
+        "02",
+        "07"
+      ],
+      "score": 1.0,
+      "top1": 1,
+      "top2": 1
+    }
+  ]
+}
