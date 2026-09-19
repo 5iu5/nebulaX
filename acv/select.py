@@ -16,7 +16,7 @@ def select(results, cfg):
     excluded = []
     for path in sorted(Path(results).glob("*.json")):
         r = json.loads(path.read_text())
-        if "outer_folds" not in r:
+        if "outer_folds" not in r or r.get("model") != "thermal":
             continue
         if r.get("status") != "complete" or r.get("quick"):
             excluded.append({"file": path.name, "status": r.get("status"), "reason": r.get("reason", "smoke run")})

@@ -16,8 +16,17 @@ dist/
 coverage.xml
 htmlcov/
 
-# Jupyter
+# Jupyter and development notebooks (not used by the deployed app)
 .ipynb_checkpoints/
+acv/notebook/
+shm/notebook/
+
+# Local coding-agent configuration (not part of the app or submission)
+.agents/
+.pi/
+AGENTS.md
+SKILLS.md
+.gitattributes
 
 # Editors and operating systems
 .DS_Store
@@ -37,13 +46,35 @@ PS3/04_Example_Submission/
 *.tmp
 *.temp
 
-# Generated ACV caches and browser artifacts
-outputs/acv/cache/
-outputs/acv/fit_cache/
-outputs/acv/browser/
-outputs/acv/wheelhouse/
+# Generated feature caches, validation reports, and browser artifacts
+# None are loaded by the Streamlit app; final deliverables live under delivery/<team>/.
+cache/
+outputs/
 catboost_info/
 
-# Generated inference outputs (reference artifacts remain in each subsystem folder)
-outputs/door/
-outputs/shm/
+# Test, evaluation, and supporting write-up sources are development-only
+# (already tracked files remain tracked; these rules affect only new untracked files).
+tests/
+door/evaluate.py
+door/metrics.py
+shm/evaluate.py
+shm/metrics.py
+acv/README.md
+shm/writeup.md
+
+# Local prediction staging and duplicate root archive
+# The submission copy is delivery/<team>/predictions.zip.
+predictions/
+/predictions.zip
+
+# Write-up source copies and document-generation helpers
+# The submission copy is delivery/<team>/Optional_Items/write_up.pdf.
+writeups/
+docs/ACV_solution_writeup.pdf
+scripts/combine_writeups.py
+scripts/render_acv_writeup_pdf.py
+
+# Local demo recordings; only the final team-folder copy is submitted
+/demo_video.*
+outputs/**/*.mp4
+outputs/**/*.mov

@@ -1,5 +1,5 @@
 {
-  "code_hash": "8e3b2ffea23e24d6ee1b90b616ba9c723e1eeadeff06158790d747f889beeb04",
+  "code_hash": "500ae31713a94715137939cf787aa4eb7ec1b01456a1385d3e8a39cc1801c6be",
   "feature_catalogue": {
     "linear": [
       "peer_mean",
@@ -51,14 +51,11 @@
     ]
   },
   "format_version": 1,
-  "model_sha256": "40311e9b3b6d046ccfe80e077da3ce2cf0477fca20d976b727981fd8bef87f96",
+  "model_sha256": "bcf5d5a78e4cd8c235222b80f25729ef8b1af743f490a8203b53b1e504adcbfe",
   "pressure_policy": "Diagnostic only; no independently validated rich-schema cohort.",
   "quality_policy": "Unavailable cars retain neutral percentile 0.5; scores are not probabilities.",
   "selection": {
     "available_models": [
-      "healthy_residual",
-      "linear_ranker",
-      "tcn_mil",
       "thermal"
     ],
     "baseline_params": {
@@ -79,23 +76,17 @@
       "acv_case_05.xlsx": "cc994bf2a1a197e05ef4f231186a7da990fc6203b842d94327181866d62cfe08",
       "acv_case_06.xlsx": "6066b6882bf92af6b81fff311af870edf407f19257806f896a47b7e57e751172"
     },
-    "code_hash": "8e3b2ffea23e24d6ee1b90b616ba9c723e1eeadeff06158790d747f889beeb04",
-    "excluded_models": [
-      {
-        "file": "catboost_ranker.json",
-        "reason": "No module named 'catboost'",
-        "status": "unavailable"
-      }
-    ],
+    "code_hash": "500ae31713a94715137939cf787aa4eb7ec1b01456a1385d3e8a39cc1801c6be",
+    "excluded_models": [],
     "inner_summary": {
       "cases": 6,
-      "primary_metric": 1.0,
-      "top1_accuracy": 1.0,
+      "primary_metric": 0.9791666666666666,
+      "top1_accuracy": 0.8333333333333334,
       "top2_accuracy": 1.0,
-      "worst_rank": 1
+      "worst_rank": 2
     },
     "interpretation": "Nested development validation; six independent cases. Hidden-test accuracy is unknown.",
-    "model": "linear_ranker",
+    "model": "thermal",
     "nested_selector_cases": [
       {
         "faulty_car": "01",
@@ -106,8 +97,8 @@
           "02",
           "03",
           "04",
-          "08",
           "07",
+          "08",
           "05",
           "06"
         ],
@@ -118,16 +109,16 @@
           },
           "inner_summary": {
             "cases": 5,
-            "primary_metric": 1.0,
-            "top1_accuracy": 1.0,
+            "primary_metric": 0.975,
+            "top1_accuracy": 0.8,
             "top2_accuracy": 1.0,
-            "worst_rank": 1
+            "worst_rank": 2
           },
-          "model": "linear_ranker",
+          "model": "thermal",
           "params": {
-            "C": 1.0
+            "aggregation": "mean"
           },
-          "weight": 0.5
+          "weight": 0.0
         },
         "top1": 1,
         "top2": 1,
@@ -154,10 +145,10 @@
           "02",
           "03",
           "08",
-          "01",
           "07",
-          "04",
           "06",
+          "01",
+          "04",
           "05"
         ],
         "score": 1.0,
@@ -167,16 +158,16 @@
           },
           "inner_summary": {
             "cases": 5,
-            "primary_metric": 1.0,
-            "top1_accuracy": 1.0,
+            "primary_metric": 0.975,
+            "top1_accuracy": 0.8,
             "top2_accuracy": 1.0,
-            "worst_rank": 1
+            "worst_rank": 2
           },
-          "model": "linear_ranker",
+          "model": "thermal",
           "params": {
-            "C": 1.0
+            "aggregation": "mean"
           },
-          "weight": 0.5
+          "weight": 0.0
         },
         "top1": 1,
         "top2": 1,
@@ -203,9 +194,9 @@
           "03",
           "02",
           "01",
-          "08",
-          "04",
           "07",
+          "04",
+          "08",
           "05",
           "06"
         ],
@@ -216,16 +207,16 @@
           },
           "inner_summary": {
             "cases": 5,
-            "primary_metric": 1.0,
-            "top1_accuracy": 1.0,
+            "primary_metric": 0.975,
+            "top1_accuracy": 0.8,
             "top2_accuracy": 1.0,
-            "worst_rank": 1
+            "worst_rank": 2
           },
-          "model": "linear_ranker",
+          "model": "thermal",
           "params": {
-            "C": 0.01
+            "aggregation": "mean"
           },
-          "weight": 0.5
+          "weight": 0.0
         },
         "top1": 1,
         "top2": 1,
@@ -314,17 +305,16 @@
           },
           "inner_summary": {
             "cases": 5,
-            "primary_metric": 1.0,
-            "top1_accuracy": 1.0,
+            "primary_metric": 0.975,
+            "top1_accuracy": 0.8,
             "top2_accuracy": 1.0,
-            "worst_rank": 1
+            "worst_rank": 2
           },
-          "model": "healthy_residual",
+          "model": "thermal",
           "params": {
-            "aggregation": "mean",
-            "alpha": 0.1
+            "aggregation": "mean"
           },
-          "weight": 0.25
+          "weight": 0.0
         },
         "top1": 1,
         "top2": 1,
@@ -364,17 +354,16 @@
           },
           "inner_summary": {
             "cases": 5,
-            "primary_metric": 1.0,
-            "top1_accuracy": 1.0,
+            "primary_metric": 0.975,
+            "top1_accuracy": 0.8,
             "top2_accuracy": 1.0,
-            "worst_rank": 1
+            "worst_rank": 2
           },
-          "model": "healthy_residual",
+          "model": "thermal",
           "params": {
-            "aggregation": "mean",
-            "alpha": 0.1
+            "aggregation": "mean"
           },
-          "weight": 0.25
+          "weight": 0.0
         },
         "top1": 1,
         "top2": 1,
@@ -395,7 +384,7 @@
       }
     ],
     "params": {
-      "C": 0.01
+      "aggregation": "mean"
     },
     "validation_summary": {
       "cases": 6,
@@ -404,7 +393,7 @@
       "top2_accuracy": 1.0,
       "worst_rank": 2
     },
-    "weight": 0.5
+    "weight": 0.0
   },
   "training_files": [
     "acv_case_01.xlsx",

@@ -19,8 +19,7 @@ include = ["acv*", "door*", "rail*", "shm*"]
 
 [tool.setuptools.package-data]
 door = ["*.csv", "*.joblib"]
-shm = ["*.csv", "*.json", "*.joblib"]
-shm_v2 = ["model_metadata.json"]
+shm = ["model_metadata.json", "notebook/*.ipynb", "notebook/*.md"]
 rail = ["*.pkl"]
 
 [tool.pytest.ini_options]

@@ -17,17 +17,41 @@ from .metrics import rail_macro_f1
 from .models import build_model, save_model
 
 SEED = 42
+DEFAULT_CACHE = Path("cache/rail_features.parquet")
 
 
-def build_training_frame(train_dir: str | Path = TRAIN_DIR) -> pd.DataFrame:
-    rows = []
-    for path, label in iter_training_files(read_labels(), train_dir):
+def build_training_frame(train_dir: str | Path = TRAIN_DIR, cache_path: str | Path = DEFAULT_CACHE) -> pd.DataFrame:
+    labels = read_labels()
+    expected = set(labels["filename"])
+    cache = Path(cache_path)
+    if cache.exists():
+        features = pd.read_parquet(cache)
+        if set(features["filename"]) != expected:
+            raise ValueError("Rail feature cache does not match the labelled training files")
+        return features.sort_values("filename").reset_index(drop=True)
+
+    partial = cache.with_suffix(".partial.parquet")
+    rows = pd.read_parquet(partial).to_dict("records") if partial.exists() else []
+    completed = {row["filename"] for row in rows}
+    for index, (path, label) in enumerate(iter_training_files(labels, train_dir), start=1):
+        if path.name in completed:
+            continue
         data = read_recording(path)
         row = extract_features(data)
         row["filename"] = path.name
         row["label"] = label
         rows.append(row)
-    return pd.DataFrame(rows)
+        if index % 10 == 0:
+            cache.parent.mkdir(parents=True, exist_ok=True)
+            pd.DataFrame(rows).to_parquet(partial, index=False)
+            print(f"Cached rail features: {len(rows)}/{len(labels)}", flush=True)
+    features = pd.DataFrame(rows).sort_values("filename").reset_index(drop=True)
+    if set(features["filename"]) != expected:
+        raise ValueError("Extracted rail features do not match the labelled training files")
+    cache.parent.mkdir(parents=True, exist_ok=True)
+    features.to_parquet(cache, index=False)
+    partial.unlink(missing_ok=True)
+    return features
 
 
 def evaluate_features(features: pd.DataFrame) -> dict:
@@ -45,8 +69,12 @@ def evaluate_features(features: pd.DataFrame) -> dict:
     }
 
 
-def run(output: str | Path = "outputs/rail/evaluation.json", model_output: str | Path | None = None) -> dict:
-    features = build_training_frame()
+def run(
+    output: str | Path = "outputs/rail/evaluation.json",
+    model_output: str | Path | None = None,
+    cache_path: str | Path = DEFAULT_CACHE,
+) -> dict:
+    features = build_training_frame(cache_path=cache_path)
     result = evaluate_features(features)
     result.update({"ts": datetime.now(timezone.utc).isoformat(), "subsystem": "rail", "model": "RandomForestClassifier"})
     destination = Path(output)
@@ -64,8 +92,9 @@ def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Evaluate rail model with repeated stratified CV")
     parser.add_argument("--output", default="outputs/rail/evaluation.json")
     parser.add_argument("--model-output", default=None)
+    parser.add_argument("--cache", default=str(DEFAULT_CACHE))
     args = parser.parse_args(argv)
-    result = run(args.output, args.model_output)
+    result = run(args.output, args.model_output, args.cache)
     print(json.dumps(result, indent=2))
 
 

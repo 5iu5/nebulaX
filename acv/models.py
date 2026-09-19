@@ -11,7 +11,10 @@ from sklearn.linear_model import HuberRegressor, LogisticRegression
 from .features import LINEAR_FEATURES, TREE_FEATURES, QUALITY_FEATURES, aggregate, thermal_scores
 
 AGGREGATIONS = ["mean", "block_mean", "block_tail"]
-MODEL_NAMES = ["thermal", "healthy_residual", "linear_ranker", "catboost_ranker", "tcn_mil"]
+# Production uses the validated, position-agnostic thermal baseline only.
+# Challenger implementations remain below for reproducibility of historical experiments,
+# but are not exposed as selectable production models.
+MODEL_NAMES = ["thermal"]
 
 
 def candidates(name):

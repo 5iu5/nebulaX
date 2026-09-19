@@ -31,6 +31,7 @@ class DoorResult:
     segments: pd.DataFrame
     features: pd.DataFrame
     probabilities: np.ndarray | None
+    stream: pd.DataFrame
 
 
 def parse_door_datetime(value: object) -> pd.Timestamp:
@@ -163,7 +164,7 @@ def predict_stream(
         columns=OUTPUT_COLUMNS,
     )
     probabilities = model.predict_proba(features) if hasattr(model, "predict_proba") else None
-    return DoorResult(predictions, segments, features, probabilities)
+    return DoorResult(predictions, segments, features, probabilities, data)
 
 
 def predictions_csv(result: DoorResult) -> bytes:
