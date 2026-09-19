@@ -10,6 +10,7 @@ import plotly.graph_objects as go
 import streamlit as st
 from scipy.signal import welch
 
+from app.ui import page_header, section_intro, severity_badge, upload_intro, uploaded_files_list
 from .features import FS, channel_groups
 from .inference import RailPrediction, predict_source, validate_predictions
 from .models import load_model
@@ -17,6 +18,22 @@ from .models import load_model
 ACCENT = "#167d9a"
 SIDE_I_COLOUR = "#7b2cbf"
 SIDE_II_COLOUR = "#e76f51"
+SEVERITY_ORDER = {"High": 0, "Advisory": 1, "Normal": 2}
+
+
+
+def _operator_decision(result: RailPrediction) -> tuple[str, str, str, str]:
+    ordered = sorted(result.probabilities.values(), reverse=True)
+    margin = ordered[0] - ordered[1] if len(ordered) > 1 else 1.0
+    strength = result.confidence
+    if result.prediction == "Normal" and (strength < 0.60 or margin < 0.15):
+        return "Advisory", "Result is close to the corrugation threshold", "Repeat the recording or request engineering review.", "Low"
+    if result.prediction == "Normal":
+        return "Normal", "No corrugation signature detected", "Continue routine track monitoring.", "High" if margin >= 0.30 else "Moderate"
+    side = result.prediction
+    if strength >= 0.65 and margin >= 0.15:
+        return "High", f"Possible rail corrugation on {side}", f"Create a track inspection work order for {side} and assess grinding or reprofiling.", "High"
+    return "Advisory", f"Weak corrugation indication on {side}", "Repeat the measurement and have an engineer review the spectrum.", "Low"
 
 
 @st.cache_resource
@@ -58,9 +75,9 @@ def _spectrum_figure(contents: bytes) -> go.Figure:
     for x0, x1 in [(100, 250), (250, 500), (500, 1000)]:
         figure.add_vrect(x0=x0, x1=x1, fillcolor=ACCENT, opacity=0.08, line_width=0)
     figure.update_layout(
-        title="Mean vibration PSD by rail side",
+        title="Vibration energy by rail side",
         xaxis_title="Frequency (Hz)",
-        yaxis_title="PSD",
+        yaxis_title="Vibration energy",
         margin=dict(l=20, r=20, t=55, b=20),
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0),
     )
@@ -68,19 +85,44 @@ def _spectrum_figure(contents: bytes) -> go.Figure:
 
 
 def render() -> None:
-    st.title("Rail corrugation")
-    st.write("Upload one or more 1-second axle-box vibration CSV recordings. The model classifies each file as Normal, Side I corrugation, or Side II corrugation.")
-    st.caption("Model: balanced Random Forest using side-wise time, spectral, and spatial asymmetry features · metric: macro F1")
+    page_header(
+        eyebrow="Track condition",
+        title="Find rippled, worn track",
+        description="Works out which side of the track has worn into ripples, puts the worst recordings first, and shows the vibration pattern behind each result.",
+        tags=("One or more CSV files", "Tells you which rail side", "Adjusts for train speed"),
+    )
+    upload_intro("Upload track vibration recordings", "Drop in one or more CSV files. Each holds one second of vibration measured at the wheel bearings.")
+    with st.container():
+        uploads = st.file_uploader(
+            "Rail recording CSV files", type=["csv"], accept_multiple_files=True, key="rail_upload"
+        )
+        uploads = uploaded_files_list(uploads, "rail")
+        run = st.button(
+            "Analyze uploaded recordings",
+            type="primary",
+            disabled=not uploads,
+            width="stretch",
+            help=None if uploads else "Add at least one CSV above to enable analysis.",
+        )
+        sample_requested = st.button("Analyze supplied rail sample", width="stretch")
 
-    uploads = st.file_uploader("Rail recording CSV files", type=["csv"], accept_multiple_files=True)
-    sample_requested = st.button("Analyze supplied rail sample")
-    sources = [(upload.name, upload.getvalue()) for upload in uploads]
-    if sample_requested and not sources:
+    # Analysis runs only on an explicit click; uploading a file must not start it.
+    sources: list = []
+    if run:
+        sources = [(upload.name, upload.getvalue()) for upload in uploads]
+    elif sample_requested:
         sources = [("sample_rail.csv", _sample_csv())]
-    if not sources:
-        st.info("Upload rail CSV files or analyze the supplied synthetic rail sample.")
-        return
 
+    if sources:
+        _run_analysis(sources)
+
+    results = st.session_state.get("rail_results")
+    if not results:
+        return
+    _render_results(results, st.session_state["rail_sources"], st.session_state["rail_predictions"])
+
+
+def _run_analysis(sources) -> None:
     results: list[RailPrediction] = []
     progress = st.progress(0, text="Preparing rail analysis…")
     try:
@@ -100,27 +142,49 @@ def render() -> None:
         st.error(f"Output validation failed: {exc}")
         return
 
+    # Persisted so results survive the next interaction instead of vanishing.
+    st.session_state.rail_results = results
+    st.session_state.rail_sources = dict(sources)
+    st.session_state.rail_predictions = predictions
+
+
+def _render_results(results, sources, predictions) -> None:
     st.success(f"Analysed {len(results)} file{'s' if len(results) != 1 else ''}; output schema validated.")
-    cols = st.columns(min(4, len(results)))
-    for i, result in enumerate(results):
-        cols[i % len(cols)].metric(result.file_id, result.prediction, f"confidence {result.confidence:.0%}")
+    triage = []
+    for result in results:
+        severity, verdict, action, confidence = _operator_decision(result)
+        triage.append({"File": result.file_id, "Severity": severity, "Verdict": verdict, "Confidence": confidence, "Action": action})
+    triage.sort(key=lambda row: SEVERITY_ORDER[row["Severity"]])
+    section_intro("What to check first", "Recordings are sorted with the most urgent at the top.")
+    st.dataframe(pd.DataFrame(triage), hide_index=True, width="stretch")
 
-    selected_name = st.selectbox("Inspect file", [r.file_id for r in results])
+    selected_name = st.selectbox("Inspect result", [row["File"] for row in triage])
     selected = next(r for r in results if r.file_id == selected_name)
-    selected_contents = next(contents for name, contents in sources if name == selected_name)
+    selected_contents = sources[selected_name]
+    severity, verdict, action, confidence = _operator_decision(selected)
+    with st.container(border=True):
+        severity_badge(severity)
+        st.subheader(verdict)
+        a, b = st.columns(2)
+        a.metric("Decision confidence", confidence)
+        b.metric("Affected side", selected.prediction if selected.prediction != "Normal" else "None detected")
+        st.write(f"**Do now:** {action}")
+        st.caption("A Critical warning is never raised on this result alone. It also needs a separate, agreed vibration or shock safety limit to be exceeded.")
 
-    left, right = st.columns([2, 1])
-    left.plotly_chart(_spectrum_figure(selected_contents), use_container_width=True)
-    probability_table = pd.DataFrame(
-        {"class": list(selected.probabilities), "probability": list(selected.probabilities.values())}
-    ).sort_values("probability", ascending=False)
-    right.bar_chart(probability_table.set_index("class"), color=ACCENT)
-    st.caption("Why: the classifier compares vibration energy, spectral peaks, and side-to-side axle-position asymmetry; a side prediction means that side showed the stronger corrugation signature.")
+    section_intro("Why this result", "The vibration pattern for each side of the track, so you can see what the result is based on.")
+    st.plotly_chart(_spectrum_figure(selected_contents), width="stretch")
+    side_name = selected.prediction if selected.prediction != "Normal" else "both rail sides"
+    st.write(f"The vibration spectrum for {side_name} produced the strongest periodic corrugation evidence after comparing energy and axle-position patterns between Side I and Side II.")
+    with st.expander("Model evidence"):
+        probability_table = pd.DataFrame({"Class": list(selected.probabilities), "Relative model evidence": list(selected.probabilities.values())}).sort_values("Relative model evidence", ascending=False)
+        st.dataframe(probability_table, hide_index=True, width="stretch")
+        st.caption("These figures show how strong the evidence is, not the chance of a fault.")
 
     st.download_button(
         "Download rail prediction CSV",
         data=predictions.to_csv(index=False).encode("utf-8"),
         file_name="rail_predictions.csv",
         mime="text/csv",
+        icon=":material/download:",
         type="primary",
     )
